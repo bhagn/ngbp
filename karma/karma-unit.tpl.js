@@ -14,19 +14,26 @@ module.exports = function ( karma ) {
       'src/**/*.js',
       'src/**/*.coffee',
     ],
-    exclude: [
-      'src/assets/**/*.js'
-    ],
+
     frameworks: [ 'jasmine' ],
-    plugins: [ 'karma-jasmine', 'karma-firefox-launcher', 'karma-chrome-launcher', 'karma-phantomjs-launcher', 'karma-coffee-preprocessor' ],
+    plugins: [ 'karma-jasmine', 'karma-firefox-launcher', 'karma-chrome-launcher', 'karma-coffee-preprocessor', 'karma-coverage' ],
     preprocessors: {
-      '**/*.coffee': 'coffee',
+      '**/*.coffee': 'coffee'
+      <% if(coveragePreprocessors) {
+      coveragePreprocessors.forEach(function(pattern) { %>
+      , '<%= pattern %>': 'coverage'
+      <% })} %>
     },
 
     /**
      * How to report, by default.
      */
-    reporters: 'dots',
+    reporters: ['dots' <% if(reporter) { %>, '<%= reporter %>' <% } %>],
+
+    coverageReporter: {
+      type: '<%= coverageReporter %>',
+      dir: 'coverage/'
+    },
 
     /**
      * On which port should the browser connect, on which port is the test runner

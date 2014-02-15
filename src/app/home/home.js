@@ -13,7 +13,7 @@
  * specified, as shown below.
  */
 angular.module( 'ngBoilerplate.home', [
-  'ui.state',
+  'ui.router',
   'plusOne'
 ])
 
@@ -26,7 +26,7 @@ angular.module( 'ngBoilerplate.home', [
   $stateProvider.state( 'home', {
     url: '/home',
     views: {
-      "main": {
+      'main': {
         controller: 'HomeCtrl',
         templateUrl: 'home/home.tpl.html'
       }
