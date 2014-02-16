@@ -1,4 +1,6 @@
-# [ngBoilerplate](http://joshdmiller.github.com/ng-boilerplate) [![Build Status](https://travis-ci.org/joshdmiller/ng-boilerplate.png?branch=master)](https://travis-ci.org/joshdmiller/ng-boilerplate)
+[![status](https://api.travis-ci.org/bhagn/ngbp.png)](https://travis-ci.org/bhagn/ngbp)
+[![dependency status](https://david-dm.org/bhagn/ngbp.png)](https://david-dm.org/bhagn/ngbp#info=devDependencies&view=table)
+[![dev-dependency status](https://david-dm.org/bhagn/ngbp/dev-status.png)](https://david-dm.org/bhagn/ngbp#info=devDependencies&view=table)
 
 An opinionated kickstarter for [AngularJS](http://angularjs.org) projects.
 
@@ -15,9 +17,12 @@ $ sudo npm -g install grunt-cli karma bower
 $ npm install
 $ bower install
 $ grunt watch
+
+#open another terminal
+$grunt server
 ```
 
-Finally, open `file:///path/to/ng-boilerplate/build/index.html` in your browser.
+Finally, open `http://localhost:9000` in your browser.
 
 Happy hacking!
 
@@ -73,7 +78,7 @@ At a high level, the structure looks roughly like this:
 
 ```
 ng-boilerplate/
-  |- grunt-tasks/
+  |- grunt/
   |- karma/
   |- src/
   |  |- app/
@@ -107,6 +112,9 @@ learn more.
   packages here. Anything added to this directory will need to be manually added
   to `build.config.js` and `karma/karma-unit.js` to be picked up by the build
   system.
+- `grunt/` - Grunt tasks. Each task will have its own <task>.js file defining
+  its configuration. The `aliases.js` file defines the custom tasks for the
+  project.
 - `.bowerrc` - the Bower configuration file. This tells Bower to install
   components into the `vendor/` directory.
 - `bower.json` - this is our project configuration for Bower and it contains the
@@ -149,7 +157,7 @@ from GitHub, or merge the branch into your existing repository. Assuming you're
 starting from scratch, simply clone this repository using git:
 
 ```sh
-$ git clone git://github.com/joshdmiller/ng-boilerplate my-project-name
+$ git clone git://github.com/bhagn/ngbp my-project-name
 $ cd my-project-name
 ```
 
