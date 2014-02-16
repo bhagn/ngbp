@@ -1,4 +1,4 @@
-[![status](https://www.codeship.io/projects/e412d190-78f5-0131-1490-3a36723d28f5/status)](https://www.codeship.io/projects/e412d190-78f5-0131-1490-3a36723d28f5/status)
+[![status](https://api.travis-ci.org/bhagn/ngbp.png)](https://travis-ci.org/bhagn/ngbp)
 [![dependency status](https://david-dm.org/bhagn/ngbp.png)](https://david-dm.org/bhagn/ngbp#info=devDependencies&view=table)
 [![dev-dependency status](https://david-dm.org/bhagn/ngbp/dev-status.png)](https://david-dm.org/bhagn/ngbp#info=devDependencies&view=table)
 
